@@ -1,4 +1,4 @@
-PS1="\[\e[0;33m\][\h]\[\e[0;37m\][\u]\[\e[0;35m\][\W]\[\e[0m\]"
+PS1="\[\e[0;33m\][\h]\[\e[0;36m\][\u]\[\e[0;35m\][\W]\[\e[0m\]"
 
 alias ls='ls -p --color=auto'
 alias ll='ls -l'

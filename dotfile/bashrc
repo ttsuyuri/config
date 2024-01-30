@@ -1,6 +1,6 @@
-PS1="\[\e[0;33m\][\h]\[\e[0;36m\][\u]\[\e[0;35m\][\w]\[\e[0m\]"
+PS1="\[\e[0;33m\][\h]\[\e[0;36m\][\u]\[\e[0;35m\][\w]${GUIX_ENVIRONMENT:+\[\e[0;31m\][env]}\[\e[0m\]"
 
 alias ls='ls -p --color=auto'
 alias ll='ls -l'
 alias grep='grep --color=auto'
-alias vim=nvim
+alias ip='ip -color=auto'

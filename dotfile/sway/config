@@ -23,7 +23,7 @@ set $menu rofi -show drun
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
-output * bg $HOME/Pictures/Sway_Wallpaper_Blue_1920x1080.png fill
+# output * bg $HOME/Pictures/Sway_Wallpaper_Blue_1920x1080.png fill
 #
 # Example configuration:
 #
@@ -72,6 +72,9 @@ exec fcitx5 -d -r
 
     # Start your launcher
     bindsym $mod+d exec $menu
+
+    # screenshot
+    bindsym $mod+Shift+s exec grim -g "$(slurp -d)" - | wl-copy
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.

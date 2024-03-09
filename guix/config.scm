@@ -200,7 +200,7 @@ advanced 3D.")
 
 (operating-system
   (kernel linux-6.7)
-  (firmware (list amdgpu-firmware))
+  (firmware (list linux-firmware amdgpu-firmware))
   (locale "en_US.utf8")
   (timezone "Asia/Shanghai")
   (keyboard-layout (keyboard-layout "us"))
@@ -229,7 +229,11 @@ advanced 3D.")
 			     (guix-service-type
 			       config => (guix-configuration
 					   (inherit config)
-					   (http-proxy "http://127.0.0.1:7890"))))))
+					   (http-proxy "http://127.0.0.1:7890")))
+			     (elogind-service-type
+			       config => (elogind-configuration
+					   (inherit config)
+					   (handle-power-key 'ignore))))))
 
   (bootloader (bootloader-configuration
                 (bootloader grub-efi-bootloader)

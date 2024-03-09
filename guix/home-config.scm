@@ -4,7 +4,7 @@
 (define-module (guix-home-config)
   #:use-module (gnu home)
   #:use-module (gnu home services)
-  #:use-module (gnu home services shells)
+  #:use-module (gnu home services desktop)
   #:use-module (gnu services)
   #:use-module (gnu system shadow))
 
@@ -35,7 +35,9 @@
            ("GLFW_IM_MODULE" . "ibus")
            ("QT_IM_MODULE" . "fcitx")
            ("QT_PLUGIN_PATH" . "${HOME}/.guix-profile/lib/qt5/plugins")
-           ("GUIX_GTK3_IM_MODULE_FILE" . "${HOME}/.guix-profile/lib/gtk-3.0/3.0.0/immodules-gtk3.cache")))))))
+           ("GUIX_GTK3_IM_MODULE_FILE" . "${HOME}/.guix-profile/lib/gtk-3.0/3.0.0/immodules-gtk3.cache")))
+	(service home-dbus-service-type)
+	))))
 
         ;(service home-files-service-type
         ; `((".guile" ,%default-dotguile)

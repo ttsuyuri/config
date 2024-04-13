@@ -21,18 +21,11 @@
 	 `(("https_proxy" . "http://127.0.0.1:7890")
 	   ("http_proxy"  . "http://127.0.0.1:7890")
 
-	   ;;wayland
-           ("GDK_BACKEND" . "wayland")
-           ("QT_QPA_PLATFORM" . "wayland")
-           ("QT_QPA_PLATFORMTHEME" . "qt5ct")
-           ("CLUTTER_BACKEND" . "wayland")
-           ("SDL_VIDEODRIVER" . "wayland")
 
+	   ("MOZ_ENABLE_WAYLAND" . "1")
 
            ;;input method
-           ("XMODIFIERS" . "@im=fcitx")
            ("GTK_IM_MODULE" . "fcitx")
-           ("GLFW_IM_MODULE" . "ibus")
            ("QT_IM_MODULE" . "fcitx")
            ("QT_PLUGIN_PATH" . "${HOME}/.guix-profile/lib/qt5/plugins")
            ("GUIX_GTK3_IM_MODULE_FILE" . "${HOME}/.guix-profile/lib/gtk-3.0/3.0.0/immodules-gtk3.cache")))

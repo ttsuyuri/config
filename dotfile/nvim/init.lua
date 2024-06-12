@@ -99,6 +99,7 @@ require("lazy").setup({
 	"neovim/nvim-lspconfig",
 	"hrsh7th/cmp-nvim-lsp",
 	"hrsh7th/nvim-cmp",
+    "saadparwaiz1/cmp_luasnip",
     {"L3MON4D3/LuaSnip", version = "v2.*", build = "make install_jsregexp"}
 })
 
@@ -133,7 +134,7 @@ cmp.setup({
     sources = cmp.config.sources({
         { name = 'nvim_lsp' },
         -- { name = 'vsnip' }, -- For vsnip users.
-        -- { name = 'luasnip' }, -- For luasnip users.
+        { name = 'luasnip' }, -- For luasnip users.
         -- { name = 'ultisnips' }, -- For ultisnips users.
         -- { name = 'snippy' }, -- For snippy users.
     }, {
@@ -150,3 +151,7 @@ require("lspconfig").rust_analyzer.setup {
 		['rust-analyzer'] = {},
 	},
 }
+
+
+-- inlay hint
+vim.lsp.inlay_hint.enable(true)

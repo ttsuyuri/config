@@ -1,0 +1,8 @@
+theme = "gruvbox-hard"
+[editor]
+lsp.display-inlay-hints = true
+idle-timeout = 800
+[editor.cursor-shape]
+select = "underline"
+insert = "bar"
+normal = "block"

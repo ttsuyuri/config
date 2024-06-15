@@ -2,6 +2,8 @@ theme = "sonokai"
 [editor]
 lsp.display-inlay-hints = true
 idle-timeout = 800
+cursorline = true
+popup-border = "all"
 [editor.cursor-shape]
 select = "underline"
 insert = "bar"
